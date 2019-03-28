@@ -6,11 +6,11 @@ using UnityEngine;
 public class DataTarget
 {
 
-    
-
     public string targetName;
     public string titulo;
-    public string descripcion;
+    public string historia;
+    public string tesis;
+    public string demos;
 
     public string SaveToString()
     {
