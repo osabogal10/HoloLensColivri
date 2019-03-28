@@ -25,6 +25,9 @@ public class UIReceiver : InteractionReceiver
 
     void Start()
     {
+        //
+        //video = GameObject.Find("MovieScreen").GetComponent<VideoPlayer>();
+        video = transform.parent.Find("MovieScreen").GetComponent<VideoPlayer>();
         txt = textObjectState.GetComponentInChildren<TextMesh>();
         grupo = GameObject.Find("grupo");
         active = false;
@@ -33,7 +36,9 @@ public class UIReceiver : InteractionReceiver
         // Create the Text GameObject.
         titleGO = GameObject.Find("Title");
         descriptionGO = GameObject.Find("Description");
-        video = GameObject.Find("MovieScreen").GetComponent<VideoPlayer>();
+        StartCoroutine(prepareVideo());
+        video.playOnAwake = false;
+        //video.Prepare();
     }
 
     protected override void FocusEnter(GameObject obj, PointerSpecificEventData eventData)
@@ -84,6 +89,10 @@ public class UIReceiver : InteractionReceiver
                     {
                         video.Play();
                     }
+                    else
+                    {
+                        Debug.Log("Video no preparado");
+                    }
                 }
 
                 break;
@@ -133,7 +142,7 @@ public class UIReceiver : InteractionReceiver
                 text.text = "Demos";
 
                 text2 = descriptionGO.GetComponent<Text>();
-                text2.text = "Aqui se muestran las demos";
+                text2.text = "Proximamente";
 
 
                 // Do something when coffee cup is pressed
@@ -143,6 +152,18 @@ public class UIReceiver : InteractionReceiver
                 break;
         }
 
+    }
+
+    IEnumerator<int> prepareVideo()
+    {
+        video.Prepare();
+
+        //Wait until video is prepared
+        while (!video.isPrepared)
+        {
+            Debug.Log("Preparing Video");
+            yield return 1;
+        }
     }
 
     protected override void InputUp(GameObject obj, InputEventData eventData)
