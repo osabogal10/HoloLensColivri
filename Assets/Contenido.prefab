@@ -774,7 +774,7 @@ GameObject:
   - component: {fileID: 3005228868075288639}
   - component: {fileID: 3005228868075288638}
   m_Layer: 0
-  m_Name: SceneContent
+  m_Name: Contenido
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -787,9 +787,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3005228868075288576}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.39, y: -0.607, z: -0.605}
-  m_LocalScale: {x: 3, y: 1, z: 0.2000001}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 1.65, y: 0.5, z: -0.4}
+  m_LocalScale: {x: 1, y: 1, z: 0.2000001}
   m_Children:
   - {fileID: 3005228869183865951}
   - {fileID: 3005228868977550176}
@@ -797,7 +797,7 @@ Transform:
   - {fileID: 3005228868349233688}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &3005228868075288638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1884,6 +1884,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114540301864412650, guid: 40da8a1b3b26ba743b892d890b95a9f9,
+        type: 3}
+      propertyPath: targetIconRenderer
+      value: 
+      objectReference: {fileID: 3019195916031478912}
+    - target: {fileID: 114540301864412650, guid: 40da8a1b3b26ba743b892d890b95a9f9,
+        type: 3}
+      propertyPath: OverrideIcon
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 102845526646414632, guid: 40da8a1b3b26ba743b892d890b95a9f9,
         type: 3}
       propertyPath: m_FontSize
@@ -1909,16 +1919,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
-    - target: {fileID: 114540301864412650, guid: 40da8a1b3b26ba743b892d890b95a9f9,
-        type: 3}
-      propertyPath: targetIconRenderer
-      value: 
-      objectReference: {fileID: 3019195916031478912}
-    - target: {fileID: 114540301864412650, guid: 40da8a1b3b26ba743b892d890b95a9f9,
-        type: 3}
-      propertyPath: OverrideIcon
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40da8a1b3b26ba743b892d890b95a9f9, type: 3}
 --- !u!23 &3019195916031478912 stripped
@@ -1946,11 +1946,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3005228868075288639}
     m_Modifications:
-    - target: {fileID: 7742412075505698412, guid: b6b7304b882b13148af253213748688f,
-        type: 3}
-      propertyPath: m_Name
-      value: SceneDescriptionPanel
-      objectReference: {fileID: 0}
     - target: {fileID: 7742412075505698413, guid: b6b7304b882b13148af253213748688f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2005,6 +2000,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7742412075505698412, guid: b6b7304b882b13148af253213748688f,
+        type: 3}
+      propertyPath: m_Name
+      value: Panel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6b7304b882b13148af253213748688f, type: 3}
